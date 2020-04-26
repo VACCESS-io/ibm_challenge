@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+body {
+  font-family: Arial;
+  padding: 0px;
+  background: white;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 25px 50px;
+  text-align: center;
+  background: white;
+}
+img{
+  position: absolute;
+  margin: 0px -700px;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.header h2 {
+  font-size: 65px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px 850px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+  <h2 style="display: inline;"><img style="display: inline;" src="vectoredlogo.jpg" float=width="150" height="150" alt="logo" />VACCESS.IO</h2>
+  <p style="font-weight: bold;">We save lives....</p>
+</div>
+
+<div class="topnav">
+  <a href="home_page.html">Home</a>
+  <a class="active" href="locality_drop_down.html">Locality Charts</a>
+  <a href="prediction_drop_down.html">Predicted Risk Zones</a>
+  <a href="about.html">About Us</a>
+  <a href="resources.html">Resources</a>
+</div>
+<form class="dropdown">
+<select name="list" id="list" accesskey="target">
+    <option value='none' selected>Select State--</option>
+    <option value="california_data.html">California</option>
+    <option value="florida_data.html">Florida</option>
+</select>
+<input type=button value="Go" onclick="goToNewPage()" />
+</form>
+<script type="text/javascript">
+    function goToNewPage()
+    {
+        var url = document.getElementById('list').value;
+        if(url != 'none') {
+            window.location = url;
+        }
+    }
+</script>
+</body>
